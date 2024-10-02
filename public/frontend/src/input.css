@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+
+    .w-custom_width {
+      width: 200px;
+    }
+    .left-custom-spacing {
+      left: 10px;
+    }
+  }
+@layer components {
+  
+  .category {
+    @apply w-custom_width left-custom-spacing;
+  }
+
+  .container {
+    @apply mx-auto lg:w-[1024px] lg:px-8 xl:px-16 xl:w-[1280px] md:px-4 sm:w-[640px] sm:px-3 2xl:w-[1536px] 2xl:px-[10];
+  }
+  /* Custom class for mobile devices */
+  @media (max-width: 639px) {
+    .mobile-container {
+      @apply mx-auto p-1; /* Center horizontally */
+      width: 80%;
+    }
+  }
+}
